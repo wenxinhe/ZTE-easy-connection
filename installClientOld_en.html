@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link type="text/css" rel="stylesheet" href="static/js/installClient_en.css" media="screen">
+	<title>下载EsayConnect</title>
+	<script src="static/js/language.en_US.json" type="text/javascript"></script>
+</head>
+
+<body class="body_cls">
+	<div class="win_cls">
+		<div class="r_l_auto_cls">
+			<div class="header_cls">
+				<img src="static/js/ec-logo.png" alt="logo">
+			</div>
+			<div class="pc_download_cls">
+				<p class="welcome_cls">下载EasyConnect客户端</p>
+				<a id="downloadConnect" class="button" href="doc/EasyConnectInstaller.exe">
+					<span>下载 EasyConnect</span></a>
+				<p class="apply_cls">Windows 10/8.1/8/7/Vista/XP</p>
+				<a href="http://8.135.97.125">企业邮箱系统</a>
+			</div>
+		</div>
+	</div>
+	<div class="other_cls">
+		<div class="r_l_auto_cls">
+			<div class="other_link_box_cls">
+				<div id="qrCodeBox" class="ios_qr_code_box_cls" style="display:none;">
+					<div class="qr_code_radius_cls">
+						<div class="qr_code_link_cls">
+							<a id="download" href="javascript:void(0)" target="_blank">download to PC</a>
+						</div>
+					</div>
+					<span class="arrow_down_cls"></span>
+				</div>
+				<div class="other_link_cls" style="display:none;">
+					<a id="ios" class="show_qr_box_cls" href="javascript:void(0)">iOS</a>
+					<a id="android" class="show_qr_box_cls" href="javascript:void(0)">Android</a>
+					<span class="line_left_cls"></span>
+					<span class="line_right_cls"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="static/js/jquery.js"></script>
+	<script>
+		$('#downloadConnect').on('click', function () {
+			setTimeout(() => {
+				sessionStorage.setItem('allowJump', false)
+				window.location.href = "/"
+			}, 3000)
+		})
+	</script>
+</body>
+
+</html>

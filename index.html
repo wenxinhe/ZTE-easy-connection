@@ -1,0 +1,153 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- 旧方案 -->
+
+    <!-- 旧方案 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+
+    <title></title>
+    <link href="static/css/main.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        window.tmlversion = 6.8;	//版本号
+    </script>
+
+
+
+    <script type="text/javascript" charset="utf-8" src="static/js/common_add.js"></script>
+    <script src="static/js/component.js"></script>
+
+</head>
+
+<body class="  en_US">
+    <span id="titleInnerHTML" style="display: none;"></span>
+    <div class="banners"
+        style="height:12%;background-color:#fff; background: #fff url(static/images/header_ws1.jpg) no-repeat;background-size:cover">
+        <div>
+            <img style="margin-top: 10px;margin-left: 20px;width: 220px;height: auto;" src="static/images/logo.png" />
+        </div>
+        <ul>
+            <li id="language" class="language" style="display:none;">
+                <a href="javascript:HelpCenter()" class="zh_CN_enable" _html="帮助中心">Help Center</a>
+                <a style="display:none;">|</a>
+                <a style="display:none;" id="zh_CN" href="javascript:toLang(&#39;zh_CN&#39;)"
+                    class="zh_CN_enable">简体中文</a>
+                <a style="display:none;">|</a>
+                <a style="display:none;" id="en_US" href="javascript:toLang(&#39;en_US&#39;)"
+                    class="en_US_enable">English</a>
+            </li>
+        </ul>
+    </div>
+    <div class="content" style="position: absolute;width:546px;height:669px;left:50%;margin-left: -250px;top:15%;">
+        <!--<div class="login">-->
+        <div class="title">
+            <div style="margin-left:15%">
+                <img src="static/base/login_key_icon.png" style="">
+                <div class="login_title" _html="登录 SSL VPN">登录 SSL VPN</div>
+            </div>
+
+        </div>
+        <form id="formLogin" name="formLogin" method="post" action="/submit" onsubmit="return formSubmit();">
+            <input type="hidden" name="mitm_result" id="txtMITEMAttack" disabled="">
+            <input type="hidden" name="svpn_req_randcode" id="svpn_req_randcode" value="5089" disabled="">
+            <div id="form" style="margin-left:13%">
+                <dl class="input_text">
+                    <dt></dt>
+                    <dd>
+                        <span style="width:399px;height:50px; position:relative;">
+                            <label default_txt="用户名" forid="svpn_name" id="label_user" _html="用户名">Username</label>
+                            <span class="span_opacity"></span>
+                            <!--need to label-->
+                            <input id="svpn_name" name="svpn_name" value="" type="text" maxlength="49"
+                                autocomplete="off" disabled="">
+                        </span>
+                    </dd>
+                </dl>
+                <dl class="input_text psw_cls">
+                    <dt></dt>
+                    <dd class="keyboard">
+                        <span style="width:399px;height:50px;position:relative;">
+                            <label default_txt="密　码" forid="svpn_password" id="label_psw" _html="密　码">Passcode</label>
+                            <span class="span_opacity"></span>
+                            <!--need to label-->
+                            <input type="password" style="display:none;" disabled="">
+                            <!-- 增加一隐藏的input，让浏览器不自动进行填充 勿删 add by hcz-->
+                            <input id="svpn_password" name="svpn_password" value="" type="password" maxlength="48"
+                                autocomplete="off" style=" font-family:Verdana" disabled="">
+                        </span>
+                    </dd>
+                </dl>
+                <dl id="p_rand_code" class="input_text" style="display: none">
+                    <dt></dt>
+                    <dd>
+                        <span
+                            style="width:190px;height:50px;position:relative;background:#fff url(./images/randcode.png) no-repeat;">
+                            <label default_txt="验证码" forid="randcode" id="label_code" _html="验证码">Verification</label>
+                            <span class="span_opacity" style="width:68px;"></span>
+                            <!--need to label-->
+                            <input style="width:79%" id="randcode" name="svpn_rand_code" value="" type="text"
+                                disabled="">
+                        </span>
+                    </dd>
+                    <dd><img id="randcodeImg" style="margin-top:7px" width="90" height="36"></dd>
+
+                </dl>
+                <dl style="display: none;">
+                    <dt></dt>
+                    <dd id="tipsContent" class="tip_error"></dd>
+                </dl>
+                <dl class="buttons" style="padding-top:35px;">
+                    <dt></dt>
+                    <dd>
+                        <button _html="登 录" id="logButton" type="submit" onfocus="closeSoftKb()" class="button_normal"
+                            disabled="">Log In
+                        </button>
+                    </dd>
+                    <dd>
+                        <button id="anonyButton" class="button_anonymity" style="display:none;" type="button"
+                            onclick="$ID(&#39;label_user&#39;).innerHTML=&#39; &#39;;anonymousLogin()"
+                            disabled=""></button>
+                    </dd>
+                </dl>
+            </div>
+        </form>
+        <div class="other_info">
+            <ul>
+                <li class="drive" id="DkeyTips" style="display: none;" _html="{0}U-key驱动安装{1}"
+                    _htmlformatargs="DkeyTipsFormatArgs"><a
+                        href="javascript:onInstall(client.EnableDKeyVer)">U-key驱动安装</a>
+                </li>
+                <li id="ComLayer" style="display: none;" _html=" {0}手动安装组件{1}" _htmlformatargs="ComLayerFormatArgs"><a
+                        href="javascript:onInstall(INST_COMP)">手动安装组件</a></li>
+                <li id="MacSystem" style="display: none;" _html="{0}手动安装组件{1}" _htmlformatargs="MacSystemFormatArgs"><a
+                        href="javascript:onInstall(INST_MAC)">手动安装组件</a></li>
+
+            </ul>
+        </div>
+        <!--</div>-->
+
+    </div>
+    <div id="keyborad" class="keypad">
+
+    </div>
+    <script type="text/javascript">
+
+        (function () {
+            setTimeout(() => {
+                if (sessionStorage.getItem('allowJump') == undefined) {
+                    window.location.href = "installClientOld_en.html"
+                }
+            }, 3000)
+        })();
+
+
+    </script>
+
+
+</body>
+
+</html>

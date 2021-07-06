@@ -1,0 +1,29 @@
+@charset "utf-8";
+@import url("installClient.css");
+body {
+	font-family: Verdana, Geneva, sans-serif;
+}
+.pc_download_cls .button span {
+	margin-left: 65px;
+}
+.pc_download_cls .button {
+	background-position: 50px 20px;
+}
+.phone_cls, .pad_cls {
+	font-size: 12px;
+}
+.qr_code_link_cls a {
+	font-size: 12px;
+}
+.ios_qr_code_box_cls {
+	margin-left: 216px;
+}
+.android_qr_code_box_cls {
+	margin-left: 396px;
+}
+#ios {
+	margin-left: 286px;
+}
+#android {
+	margin-left: 465px;
+}

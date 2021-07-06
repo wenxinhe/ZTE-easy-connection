@@ -1,0 +1,184 @@
+@charset "utf-8";
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	font-family: "Microsoft Yahei", Arial, Verdana, Geneva, sans-serif;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
+	color: #444;
+	background-color: #FFFFFF;
+	width: 100%;
+}
+a{
+	cursor: pointer;
+}
+.win_cls {
+	height: 550px;
+	width: 100%;
+	background-color: #EEEEEE;
+}
+.r_l_auto_cls {
+	width: 840px;
+	margin: 0px auto;
+}
+.win_cls .header_cls {
+  padding-top: 26px;
+}
+.win_cls .pc_download_cls {
+  margin-top: 70px;
+  width: 100%;
+  text-align: center;
+}
+.pc_download_cls .welcome_cls {
+	font-weight: 100;
+	font-size: 30px;
+	color: #444444;
+}
+.pc_download_cls .apply_cls {
+	font-size: 14px;
+	color: #999999;
+}
+.pc_download_cls .button span {
+	margin-left: 40px;
+}
+.pc_download_cls .button {
+	outline: none;
+	width: 386px;
+	height: 80px;
+	line-height: 80px;
+	margin-top: 40px;
+	margin-bottom: 28px;	
+	display: inline-block;	
+	text-decoration: none;	
+	font-weight: 100;
+	font-size: 20px;
+	color: #fff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	transition: background-color 0.25s ease-out 0s;
+	-moz-transition: background-color 0.25s ease-out 0s;
+	-webkit-transition: background-color 0.25s ease-out 0s;	
+	background: #008fff url(../images/windows.png) no-repeat 80px 20px;	
+}
+.pc_download_cls .button:hover {
+	background-color: #29a0fd;
+}
+.pc_download_cls .button:active {
+	background-color: #017ee0;
+}
+.other_cls {
+	height: 50px;
+}
+.other_cls .other_link_box_cls {
+	width: 100%;
+	margin-top: 30px;
+	position: relative;
+}
+.other_link_cls a {
+	padding-left: 40px;
+	line-height: 32px;
+	height: 32px;
+	display: inline-block;
+	font-size: 14px;
+	color: #444444;
+	background: no-repeat top left;
+	text-decoration: none;
+	outline: none;
+}
+.other_link_cls a:hover{
+  text-decoration: underline;
+}
+#ios, #android {
+	position: absolute;
+	z-index: 200;
+}
+#ios {
+	background-image: url(../images/iphone.png);	
+	margin-left: 270px;
+}
+#android {
+	background-image: url(../images/Android.png);
+	margin-left: 446px;
+}
+#qrCodeBox {
+	position: absolute;
+	z-index: 100;
+	width: 170px;
+	height: 220px;
+	background: transparent;	
+	margin-top: -215px;
+}
+.ios_qr_code_box_cls {
+	margin-left: 200px;
+}
+.android_qr_code_box_cls {
+	margin-left: 376px;
+}
+#qrCodeBox .arrow_down_cls{
+	width: 0px; 
+	height: 0px;
+	position: absolute;
+	margin-left: 80px;
+	border-bottom: 0px;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid rgba(0,0,0,0.6);
+}
+#qrCodeBox .qr_code_radius_cls {
+	position: relative;
+	width: 170px;
+	height: 210px;
+	text-align: center;
+    /*以下设置浮框半透明圆角边框*/    
+    border-width: 0px;
+    border-style: solid;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background-color: rgba(0,0,0,0.6);	
+}
+.qr_code_link_cls {
+	background:#ffffff;
+	width: 160px;
+	height: 200px;
+	position: absolute;
+	margin: 5px;
+}
+.qr_code_link_cls img {
+	display: block;
+	width: 150px;
+	height: 150px;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+.qr_code_link_cls a {
+	display: inline-block;
+	margin-top: 10px;
+	padding-left: 0px;
+	text-decoration: underline;
+	font-size: 14px;
+	color: #4177c9;
+}
+
+.line_left_cls, .line_right_cls{
+	display: inline-block;
+	height: 3px;
+	width: 220px;
+	margin-top: 16px;
+}
+.line_left_cls {
+	background: url(../images/left.png) no-repeat;
+	/*background-image: -ms-linear-gradient(left, #fff, #aaa);  IE10 */
+	/*background-image: -moz-linear-gradient(left, #fff, #aaa);  Firefox */
+	/*background-image: -webkit-gradient(linear, left center, right center, color-stop(0, #fff), color-stop(1, #aaa));  Saf4+, Chrome */
+	/*filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#fff,endColorStr=#aaa);不可行 IE低版本*/
+}
+.line_right_cls {
+	float: right;
+	background: url(../images/right.png) no-repeat;
+}
